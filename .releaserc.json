@@ -9,7 +9,8 @@
     "@semantic-release/changelog",
     ["@semantic-release/github", {
       "assets": [
-        {"path": "dist/uniauth", "name": "uniauth-linux-amd64-${nextRelease.version}"}
+        {"path": "dist/uniauth", "name": "uniauth-linux-amd64-${nextRelease.version}"},
+        {"path": "dist/frontend", "name": "frontend-${nextRelease.version}.tar.gz"}
       ]
     }]
   ]
