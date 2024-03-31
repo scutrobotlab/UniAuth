@@ -1,1 +1,9 @@
 web/node_modules/
+
+*.md
+.git
+.gitignore
+bin
+.idea
+
+.github
