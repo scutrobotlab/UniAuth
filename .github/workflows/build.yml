@@ -199,8 +199,8 @@ jobs:
           push: true
           platforms: linux/amd64
           tags: |
-            ghcr.io/scutrobotlab/UniAuth:latest
-            ghcr.io/scutrobotlab/UniAuth:${{ needs.release.outputs.new_version }}
+            ghcr.io/scutrobotlab/uniauth:latest
+            ghcr.io/scutrobotlab/uniauth:${{ needs.release.outputs.new_version }}
           labels: |
             org.opencontainers.image.source=https://github.com/wintbiit/ninedns
             org.opencontainers.image.revision=${{ github.sha }}
