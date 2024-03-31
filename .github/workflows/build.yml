@@ -181,9 +181,7 @@ jobs:
         with:
           context: .
           push: true
-          platforms: linux/amd64,linux/arm64,linux/arm/v7
-          build-args: |
-            TAGS=mysql
+          platforms: linux/amd64
           tags: |
             ghcr.io/scutrobotlab/UniAuth:latest
             ghcr.io/scutrobotlab/UniAuth:${{ needs.release.outputs.new_version }}
