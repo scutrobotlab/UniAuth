@@ -21,9 +21,9 @@ import (
 	"strings"
 
 	"github.com/beego/beego/context"
+	"github.com/casvisor/casvisor-go-sdk/casvisorsdk"
 	"github.com/scutrobotlab/casdoor/conf"
 	"github.com/scutrobotlab/casdoor/util"
-	"github.com/casvisor/casvisor-go-sdk/casvisorsdk"
 )
 
 var (

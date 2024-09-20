@@ -24,8 +24,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/scutrobotlab/casdoor/util"
 	"github.com/nyaruka/phonenumbers"
+	"github.com/scutrobotlab/casdoor/util"
 	"golang.org/x/oauth2"
 )
 

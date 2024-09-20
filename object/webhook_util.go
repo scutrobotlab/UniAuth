@@ -19,8 +19,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/scutrobotlab/casdoor/util"
 	"github.com/casvisor/casvisor-go-sdk/casvisorsdk"
+	"github.com/scutrobotlab/casdoor/util"
 )
 
 func sendWebhook(webhook *Webhook, record *casvisorsdk.Record, extendedUser *User) (int, string, error) {

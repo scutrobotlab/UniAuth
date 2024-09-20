@@ -23,12 +23,12 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/scutrobotlab/casdoor/idp"
 	"github.com/mitchellh/mapstructure"
+	"github.com/scutrobotlab/casdoor/idp"
 
-	"github.com/scutrobotlab/casdoor/i18n"
 	saml2 "github.com/russellhaering/gosaml2"
 	dsig "github.com/russellhaering/goxmldsig"
+	"github.com/scutrobotlab/casdoor/i18n"
 )
 
 func ParseSamlResponse(samlResponse string, provider *Provider, host string) (*idp.UserInfo, error) {

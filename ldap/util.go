@@ -19,9 +19,9 @@ import (
 	"log"
 	"strings"
 
+	"github.com/lor00x/goldap/message"
 	"github.com/scutrobotlab/casdoor/object"
 	"github.com/scutrobotlab/casdoor/util"
-	"github.com/lor00x/goldap/message"
 
 	ldap "github.com/forestmgy/ldapserver"
 

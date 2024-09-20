@@ -21,11 +21,11 @@ import (
 	"time"
 	"unicode"
 
+	goldap "github.com/go-ldap/ldap/v3"
 	"github.com/scutrobotlab/casdoor/cred"
 	"github.com/scutrobotlab/casdoor/form"
 	"github.com/scutrobotlab/casdoor/i18n"
 	"github.com/scutrobotlab/casdoor/util"
-	goldap "github.com/go-ldap/ldap/v3"
 )
 
 const (

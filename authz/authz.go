@@ -18,10 +18,10 @@ import (
 	"strings"
 
 	"github.com/casbin/casbin/v2"
+	stringadapter "github.com/qiangmzsx/string-adapter/v2"
 	"github.com/scutrobotlab/casdoor/conf"
 	"github.com/scutrobotlab/casdoor/object"
 	"github.com/scutrobotlab/casdoor/util"
-	stringadapter "github.com/qiangmzsx/string-adapter/v2"
 )
 
 var Enforcer *casbin.Enforcer

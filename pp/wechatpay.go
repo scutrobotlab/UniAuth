@@ -19,9 +19,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/scutrobotlab/casdoor/util"
 	"github.com/go-pay/gopay"
 	"github.com/go-pay/gopay/wechat/v3"
+	"github.com/scutrobotlab/casdoor/util"
 )
 
 type WechatPayNotifyResponse struct {

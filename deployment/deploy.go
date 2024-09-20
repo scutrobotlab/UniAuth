@@ -20,10 +20,10 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/casdoor/oss"
 	"github.com/scutrobotlab/casdoor/object"
 	"github.com/scutrobotlab/casdoor/storage"
 	"github.com/scutrobotlab/casdoor/util"
-	"github.com/casdoor/oss"
 )
 
 func deployStaticFiles(provider *object.Provider) {

@@ -15,9 +15,9 @@
 package notification
 
 import (
-	"github.com/scutrobotlab/casdoor/proxy"
 	"github.com/casdoor/notify"
 	"github.com/casdoor/notify/service/matrix"
+	"github.com/scutrobotlab/casdoor/proxy"
 	"maunium.net/go/mautrix/id"
 )
 

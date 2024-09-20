@@ -19,9 +19,9 @@ import (
 	"fmt"
 
 	"github.com/beego/beego/utils/pagination"
+	xormadapter "github.com/casdoor/xorm-adapter/v3"
 	"github.com/scutrobotlab/casdoor/object"
 	"github.com/scutrobotlab/casdoor/util"
-	xormadapter "github.com/casdoor/xorm-adapter/v3"
 )
 
 // GetEnforcers

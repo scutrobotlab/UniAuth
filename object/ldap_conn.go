@@ -19,9 +19,9 @@ import (
 	"fmt"
 	"strings"
 
+	goldap "github.com/go-ldap/ldap/v3"
 	"github.com/scutrobotlab/casdoor/conf"
 	"github.com/scutrobotlab/casdoor/util"
-	goldap "github.com/go-ldap/ldap/v3"
 	"github.com/thanhpk/randstr"
 )
 

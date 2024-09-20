@@ -25,6 +25,7 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/google/uuid"
 	"github.com/scutrobotlab/casdoor/captcha"
 	"github.com/scutrobotlab/casdoor/conf"
 	"github.com/scutrobotlab/casdoor/form"
@@ -32,7 +33,6 @@ import (
 	"github.com/scutrobotlab/casdoor/object"
 	"github.com/scutrobotlab/casdoor/proxy"
 	"github.com/scutrobotlab/casdoor/util"
-	"github.com/google/uuid"
 	"golang.org/x/oauth2"
 )
 

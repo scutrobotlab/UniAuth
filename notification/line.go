@@ -15,9 +15,9 @@
 package notification
 
 import (
-	"github.com/scutrobotlab/casdoor/proxy"
 	"github.com/casdoor/notify"
 	"github.com/casdoor/notify/service/line"
+	"github.com/scutrobotlab/casdoor/proxy"
 )
 
 func NewLineProvider(channelSecret string, accessToken string, receiver string) (*notify.Notify, error) {

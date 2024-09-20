@@ -19,11 +19,11 @@ import (
 	"fmt"
 	"io"
 
+	"github.com/go-webauthn/webauthn/protocol"
+	"github.com/go-webauthn/webauthn/webauthn"
 	"github.com/scutrobotlab/casdoor/form"
 	"github.com/scutrobotlab/casdoor/object"
 	"github.com/scutrobotlab/casdoor/util"
-	"github.com/go-webauthn/webauthn/protocol"
-	"github.com/go-webauthn/webauthn/webauthn"
 )
 
 // WebAuthnSignupBegin

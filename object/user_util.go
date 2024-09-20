@@ -21,11 +21,11 @@ import (
 	"regexp"
 	"strings"
 
+	jsoniter "github.com/json-iterator/go"
 	"github.com/scutrobotlab/casdoor/conf"
 	"github.com/scutrobotlab/casdoor/i18n"
 	"github.com/scutrobotlab/casdoor/idp"
 	"github.com/scutrobotlab/casdoor/util"
-	jsoniter "github.com/json-iterator/go"
 	"github.com/xorm-io/core"
 )
 

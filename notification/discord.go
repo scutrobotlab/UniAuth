@@ -15,9 +15,9 @@
 package notification
 
 import (
-	"github.com/scutrobotlab/casdoor/proxy"
 	"github.com/casdoor/notify"
 	"github.com/casdoor/notify/service/discord"
+	"github.com/scutrobotlab/casdoor/proxy"
 )
 
 func NewDiscordProvider(token string, channelId string) (*notify.Notify, error) {

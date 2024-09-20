@@ -22,7 +22,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/scutrobotlab/casdoor/util"
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/providers/amazon"
 	"github.com/markbates/goth/providers/apple"
@@ -82,6 +81,7 @@ import (
 	"github.com/markbates/goth/providers/yammer"
 	"github.com/markbates/goth/providers/yandex"
 	"github.com/markbates/goth/providers/zoom"
+	"github.com/scutrobotlab/casdoor/util"
 	"golang.org/x/oauth2"
 )
 

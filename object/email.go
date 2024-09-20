@@ -19,8 +19,8 @@ package object
 import (
 	"crypto/tls"
 
-	"github.com/scutrobotlab/casdoor/email"
 	"github.com/casdoor/gomail/v2"
+	"github.com/scutrobotlab/casdoor/email"
 )
 
 func getDialer(provider *Provider) *gomail.Dialer {

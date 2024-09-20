@@ -19,9 +19,9 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/go-webauthn/webauthn/webauthn"
 	"github.com/scutrobotlab/casdoor/conf"
 	"github.com/scutrobotlab/casdoor/util"
-	"github.com/go-webauthn/webauthn/webauthn"
 )
 
 func InitDb() {

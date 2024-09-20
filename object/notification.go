@@ -17,8 +17,8 @@ package object
 import (
 	"context"
 
-	"github.com/scutrobotlab/casdoor/notification"
 	"github.com/casdoor/notify"
+	"github.com/scutrobotlab/casdoor/notification"
 )
 
 func getNotificationClient(provider *Provider) (notify.Notifier, error) {

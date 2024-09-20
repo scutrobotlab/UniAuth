@@ -18,8 +18,8 @@ import (
 	"fmt"
 
 	"github.com/casbin/casbin/v2"
-	"github.com/scutrobotlab/casdoor/util"
 	xormadapter "github.com/casdoor/xorm-adapter/v3"
+	"github.com/scutrobotlab/casdoor/util"
 	"github.com/xorm-io/core"
 )
 

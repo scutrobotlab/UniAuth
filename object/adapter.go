@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"strings"
 
+	xormadapter "github.com/casdoor/xorm-adapter/v3"
 	"github.com/scutrobotlab/casdoor/conf"
 	"github.com/scutrobotlab/casdoor/util"
-	xormadapter "github.com/casdoor/xorm-adapter/v3"
 	"github.com/xorm-io/core"
 	"github.com/xorm-io/xorm"
 )

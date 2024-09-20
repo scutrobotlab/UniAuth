@@ -24,8 +24,8 @@ import (
 
 	"golang.org/x/crypto/ssh"
 
-	"github.com/scutrobotlab/casdoor/util"
 	"github.com/go-sql-driver/mysql"
+	"github.com/scutrobotlab/casdoor/util"
 )
 
 type OriginalUser = User

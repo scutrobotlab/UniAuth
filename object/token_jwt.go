@@ -20,8 +20,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/scutrobotlab/casdoor/util"
 	"github.com/golang-jwt/jwt/v4"
+	"github.com/scutrobotlab/casdoor/util"
 )
 
 type Claims struct {

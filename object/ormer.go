@@ -26,12 +26,12 @@ import (
 	"github.com/casvisor/casvisor-go-sdk/casvisorsdk"
 
 	"github.com/beego/beego"
-	"github.com/scutrobotlab/casdoor/conf"
-	"github.com/scutrobotlab/casdoor/util"
 	xormadapter "github.com/casdoor/xorm-adapter/v3"
 	_ "github.com/denisenkom/go-mssqldb" // db = mssql
 	_ "github.com/go-sql-driver/mysql"   // db = mysql
 	_ "github.com/lib/pq"                // db = postgres
+	"github.com/scutrobotlab/casdoor/conf"
+	"github.com/scutrobotlab/casdoor/util"
 	"github.com/xorm-io/xorm"
 	"github.com/xorm-io/xorm/core"
 	"github.com/xorm-io/xorm/names"

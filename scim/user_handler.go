@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/scutrobotlab/casdoor/object"
 	"github.com/elimity-com/scim"
 	"github.com/elimity-com/scim/errors"
+	"github.com/scutrobotlab/casdoor/object"
 )
 
 type UserResourceHandler struct{}

@@ -26,9 +26,9 @@ import (
 	"time"
 
 	"github.com/beevik/etree"
+	dsig "github.com/russellhaering/goxmldsig"
 	"github.com/scutrobotlab/casdoor/i18n"
 	"github.com/scutrobotlab/casdoor/util"
-	dsig "github.com/russellhaering/goxmldsig"
 )
 
 type CasServiceResponse struct {

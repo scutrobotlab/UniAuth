@@ -18,11 +18,11 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/scutrobotlab/casdoor/object"
-	"github.com/scutrobotlab/casdoor/util"
 	"github.com/elimity-com/scim"
 	"github.com/elimity-com/scim/optional"
 	"github.com/elimity-com/scim/schema"
+	"github.com/scutrobotlab/casdoor/object"
+	"github.com/scutrobotlab/casdoor/util"
 )
 
 type AnyMap map[string]interface{}

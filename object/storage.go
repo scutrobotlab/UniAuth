@@ -21,11 +21,11 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/casdoor/oss"
 	"github.com/scutrobotlab/casdoor/conf"
 	"github.com/scutrobotlab/casdoor/i18n"
 	"github.com/scutrobotlab/casdoor/storage"
 	"github.com/scutrobotlab/casdoor/util"
-	"github.com/casdoor/oss"
 )
 
 var isCloudIntranet bool
