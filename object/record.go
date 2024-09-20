@@ -21,8 +21,8 @@ import (
 	"strings"
 
 	"github.com/beego/beego/context"
-	"github.com/casdoor/casdoor/conf"
-	"github.com/casdoor/casdoor/util"
+	"github.com/scutrobotlab/casdoor/conf"
+	"github.com/scutrobotlab/casdoor/util"
 	"github.com/casvisor/casvisor-go-sdk/casvisorsdk"
 )
 

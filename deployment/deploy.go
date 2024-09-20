@@ -20,9 +20,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/casdoor/casdoor/object"
-	"github.com/casdoor/casdoor/storage"
-	"github.com/casdoor/casdoor/util"
+	"github.com/scutrobotlab/casdoor/object"
+	"github.com/scutrobotlab/casdoor/storage"
+	"github.com/scutrobotlab/casdoor/util"
 	"github.com/casdoor/oss"
 )
 

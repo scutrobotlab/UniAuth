@@ -21,10 +21,10 @@ import (
 	"strings"
 
 	"github.com/beego/beego/context"
-	"github.com/casdoor/casdoor/conf"
-	"github.com/casdoor/casdoor/i18n"
-	"github.com/casdoor/casdoor/object"
-	"github.com/casdoor/casdoor/util"
+	"github.com/scutrobotlab/casdoor/conf"
+	"github.com/scutrobotlab/casdoor/i18n"
+	"github.com/scutrobotlab/casdoor/object"
+	"github.com/scutrobotlab/casdoor/util"
 )
 
 type Response struct {

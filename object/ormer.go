@@ -26,8 +26,8 @@ import (
 	"github.com/casvisor/casvisor-go-sdk/casvisorsdk"
 
 	"github.com/beego/beego"
-	"github.com/casdoor/casdoor/conf"
-	"github.com/casdoor/casdoor/util"
+	"github.com/scutrobotlab/casdoor/conf"
+	"github.com/scutrobotlab/casdoor/util"
 	xormadapter "github.com/casdoor/xorm-adapter/v3"
 	_ "github.com/denisenkom/go-mssqldb" // db = mssql
 	_ "github.com/go-sql-driver/mysql"   // db = mysql

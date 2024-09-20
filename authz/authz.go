@@ -18,9 +18,9 @@ import (
 	"strings"
 
 	"github.com/casbin/casbin/v2"
-	"github.com/casdoor/casdoor/conf"
-	"github.com/casdoor/casdoor/object"
-	"github.com/casdoor/casdoor/util"
+	"github.com/scutrobotlab/casdoor/conf"
+	"github.com/scutrobotlab/casdoor/object"
+	"github.com/scutrobotlab/casdoor/util"
 	stringadapter "github.com/qiangmzsx/string-adapter/v2"
 )
 

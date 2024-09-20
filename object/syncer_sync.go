@@ -17,7 +17,7 @@ package object
 import (
 	"fmt"
 
-	"github.com/casdoor/casdoor/util"
+	"github.com/scutrobotlab/casdoor/util"
 )
 
 func (syncer *Syncer) syncUsers() error {

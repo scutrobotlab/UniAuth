@@ -19,7 +19,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/casdoor/casdoor/util"
+	"github.com/scutrobotlab/casdoor/util"
 	"github.com/go-pay/gopay"
 	"github.com/go-pay/gopay/wechat/v3"
 )

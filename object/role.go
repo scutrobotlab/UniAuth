@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/casdoor/casdoor/conf"
+	"github.com/scutrobotlab/casdoor/conf"
 
-	"github.com/casdoor/casdoor/util"
+	"github.com/scutrobotlab/casdoor/util"
 	"github.com/xorm-io/core"
 )
 

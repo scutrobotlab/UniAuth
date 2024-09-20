@@ -19,8 +19,8 @@ import (
 	"strings"
 
 	"github.com/beego/beego/context"
-	"github.com/casdoor/casdoor/conf"
-	"github.com/casdoor/casdoor/object"
+	"github.com/scutrobotlab/casdoor/conf"
+	"github.com/scutrobotlab/casdoor/object"
 )
 
 const (

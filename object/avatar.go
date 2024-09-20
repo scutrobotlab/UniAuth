@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/casdoor/casdoor/conf"
-	"github.com/casdoor/casdoor/proxy"
+	"github.com/scutrobotlab/casdoor/conf"
+	"github.com/scutrobotlab/casdoor/proxy"
 )
 
 var defaultStorageProvider *Provider = nil

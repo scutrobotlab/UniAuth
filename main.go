@@ -20,14 +20,14 @@ import (
 	"github.com/beego/beego"
 	"github.com/beego/beego/logs"
 	_ "github.com/beego/beego/session/redis"
-	"github.com/casdoor/casdoor/authz"
-	"github.com/casdoor/casdoor/conf"
-	"github.com/casdoor/casdoor/ldap"
-	"github.com/casdoor/casdoor/object"
-	"github.com/casdoor/casdoor/proxy"
-	"github.com/casdoor/casdoor/radius"
-	"github.com/casdoor/casdoor/routers"
-	"github.com/casdoor/casdoor/util"
+	"github.com/scutrobotlab/casdoor/authz"
+	"github.com/scutrobotlab/casdoor/conf"
+	"github.com/scutrobotlab/casdoor/ldap"
+	"github.com/scutrobotlab/casdoor/object"
+	"github.com/scutrobotlab/casdoor/proxy"
+	"github.com/scutrobotlab/casdoor/radius"
+	"github.com/scutrobotlab/casdoor/routers"
+	"github.com/scutrobotlab/casdoor/util"
 )
 
 func main() {

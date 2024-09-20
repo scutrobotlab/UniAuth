@@ -17,7 +17,7 @@ package pp
 import (
 	"fmt"
 
-	"github.com/casdoor/casdoor/util"
+	"github.com/scutrobotlab/casdoor/util"
 )
 
 type BalancePaymentProvider struct{}

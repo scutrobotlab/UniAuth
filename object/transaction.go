@@ -17,8 +17,8 @@ package object
 import (
 	"fmt"
 
-	"github.com/casdoor/casdoor/pp"
-	"github.com/casdoor/casdoor/util"
+	"github.com/scutrobotlab/casdoor/pp"
+	"github.com/scutrobotlab/casdoor/util"
 	"github.com/xorm-io/core"
 )
 

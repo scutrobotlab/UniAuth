@@ -21,10 +21,10 @@ import (
 	"strings"
 
 	"github.com/beego/beego/utils/pagination"
-	"github.com/casdoor/casdoor/captcha"
-	"github.com/casdoor/casdoor/form"
-	"github.com/casdoor/casdoor/object"
-	"github.com/casdoor/casdoor/util"
+	"github.com/scutrobotlab/casdoor/captcha"
+	"github.com/scutrobotlab/casdoor/form"
+	"github.com/scutrobotlab/casdoor/object"
+	"github.com/scutrobotlab/casdoor/util"
 )
 
 const (

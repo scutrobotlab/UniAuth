@@ -24,7 +24,7 @@ import (
 
 	"golang.org/x/crypto/ssh"
 
-	"github.com/casdoor/casdoor/util"
+	"github.com/scutrobotlab/casdoor/util"
 	"github.com/go-sql-driver/mysql"
 )
 

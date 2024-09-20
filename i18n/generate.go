@@ -21,7 +21,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/casdoor/casdoor/util"
+	"github.com/scutrobotlab/casdoor/util"
 )
 
 type I18nData map[string]map[string]string

@@ -20,8 +20,8 @@ import (
 	"strconv"
 
 	"github.com/beego/beego/utils/pagination"
-	"github.com/casdoor/casdoor/object"
-	"github.com/casdoor/casdoor/util"
+	"github.com/scutrobotlab/casdoor/object"
+	"github.com/scutrobotlab/casdoor/util"
 )
 
 // GetProducts

@@ -15,7 +15,7 @@
 package controllers
 
 import (
-	"github.com/casdoor/casdoor/object"
+	"github.com/scutrobotlab/casdoor/object"
 )
 
 // GetPrometheusInfo

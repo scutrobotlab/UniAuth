@@ -21,10 +21,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/casdoor/casdoor/conf"
-	"github.com/casdoor/casdoor/i18n"
-	"github.com/casdoor/casdoor/storage"
-	"github.com/casdoor/casdoor/util"
+	"github.com/scutrobotlab/casdoor/conf"
+	"github.com/scutrobotlab/casdoor/i18n"
+	"github.com/scutrobotlab/casdoor/storage"
+	"github.com/scutrobotlab/casdoor/util"
 	"github.com/casdoor/oss"
 )
 
