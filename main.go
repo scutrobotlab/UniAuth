@@ -15,11 +15,15 @@
 package main
 
 import (
+	"context"
 	"fmt"
-
 	"github.com/beego/beego"
 	"github.com/beego/beego/logs"
 	_ "github.com/beego/beego/session/redis"
+	"github.com/gofiber/fiber/v3"
+	"github.com/gofiber/fiber/v3/middleware/adaptor"
+	"github.com/gofiber/fiber/v3/middleware/recover"
+	jsoniter "github.com/json-iterator/go"
 	"github.com/scutrobotlab/casdoor/authz"
 	"github.com/scutrobotlab/casdoor/conf"
 	"github.com/scutrobotlab/casdoor/ldap"
@@ -28,6 +32,7 @@ import (
 	"github.com/scutrobotlab/casdoor/radius"
 	"github.com/scutrobotlab/casdoor/routers"
 	"github.com/scutrobotlab/casdoor/util"
+	"time"
 )
 
 func main() {
@@ -85,5 +90,18 @@ func main() {
 	go radius.StartRadiusServer()
 	go object.ClearThroughputPerSecond()
 
-	beego.Run(fmt.Sprintf(":%v", port))
+	go beego.Run(":0")
+	time.Sleep(1 * time.Second)
+	beego.BeeApp.Server.Shutdown(context.Background())
+
+	app := fiber.New(fiber.Config{
+		JSONEncoder: jsoniter.Marshal,
+		JSONDecoder: jsoniter.Unmarshal,
+	})
+
+	app.Use(recover.New())
+
+	app.All("/*", adaptor.HTTPHandler(beego.BeeApp.Server.Handler))
+
+	app.Listen(fmt.Sprintf(":%d", port))
 }

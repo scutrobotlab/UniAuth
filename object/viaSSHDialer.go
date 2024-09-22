@@ -21,8 +21,6 @@ import (
 	"net"
 	"time"
 
-	mssql "github.com/denisenkom/go-mssqldb"
-
 	"github.com/lib/pq"
 	"golang.org/x/crypto/ssh"
 )
@@ -38,14 +36,7 @@ func (v *ViaSSHDialer) MysqlDial(ctx context.Context, addr string) (net.Conn, er
 }
 
 func (v *ViaSSHDialer) Open(s string) (_ driver.Conn, err error) {
-	if v.DatabaseType == "mssql" {
-		c, err := mssql.NewConnector(s)
-		if err != nil {
-			return nil, err
-		}
-		c.Dialer = v
-		return c.Connect(context.Background())
-	} else if v.DatabaseType == "postgres" {
+	if v.DatabaseType == "postgres" {
 		return pq.DialOpen(v, s)
 	}
 	return nil, nil

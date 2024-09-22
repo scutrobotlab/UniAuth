@@ -27,15 +27,13 @@ import (
 
 	"github.com/beego/beego"
 	xormadapter "github.com/casdoor/xorm-adapter/v3"
-	_ "github.com/denisenkom/go-mssqldb" // db = mssql
-	_ "github.com/go-sql-driver/mysql"   // db = mysql
-	_ "github.com/lib/pq"                // db = postgres
+	_ "github.com/go-sql-driver/mysql" // db = mysql
+	_ "github.com/lib/pq"              // db = postgres
 	"github.com/scutrobotlab/casdoor/conf"
 	"github.com/scutrobotlab/casdoor/util"
 	"github.com/xorm-io/xorm"
 	"github.com/xorm-io/xorm/core"
 	"github.com/xorm-io/xorm/names"
-	_ "modernc.org/sqlite" // db = sqlite
 )
 
 var (
@@ -359,36 +357,6 @@ func (a *Ormer) createTable() {
 	}
 
 	err = a.Engine.Sync2(new(Token))
-	if err != nil {
-		panic(err)
-	}
-
-	err = a.Engine.Sync2(new(Product))
-	if err != nil {
-		panic(err)
-	}
-
-	err = a.Engine.Sync2(new(Payment))
-	if err != nil {
-		panic(err)
-	}
-
-	err = a.Engine.Sync2(new(Plan))
-	if err != nil {
-		panic(err)
-	}
-
-	err = a.Engine.Sync2(new(Pricing))
-	if err != nil {
-		panic(err)
-	}
-
-	err = a.Engine.Sync2(new(Subscription))
-	if err != nil {
-		panic(err)
-	}
-
-	err = a.Engine.Sync2(new(Transaction))
 	if err != nil {
 		panic(err)
 	}

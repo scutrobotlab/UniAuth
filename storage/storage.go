@@ -20,22 +20,14 @@ func GetStorageProvider(providerType string, clientId string, clientSecret strin
 	switch providerType {
 	case "Local File System":
 		return NewLocalFileSystemStorageProvider(), nil
-	case "AWS S3":
-		return NewAwsS3StorageProvider(clientId, clientSecret, region, bucket, endpoint), nil
 	case "MinIO":
 		return NewMinIOS3StorageProvider(clientId, clientSecret, "_", bucket, endpoint), nil
 	case "Aliyun OSS":
 		return NewAliyunOssStorageProvider(clientId, clientSecret, region, bucket, endpoint), nil
 	case "Tencent Cloud COS":
 		return NewTencentCloudCosStorageProvider(clientId, clientSecret, region, bucket, endpoint), nil
-	case "Azure Blob":
-		return NewAzureBlobStorageProvider(clientId, clientSecret, region, bucket, endpoint), nil
 	case "Qiniu Cloud Kodo":
 		return NewQiniuCloudKodoStorageProvider(clientId, clientSecret, region, bucket, endpoint)
-	case "Google Cloud Storage":
-		return NewGoogleCloudStorageProvider(clientSecret, bucket, endpoint), nil
-	case "Synology":
-		return NewSynologyNasStorageProvider(clientId, clientSecret, endpoint), nil
 	case "Casdoor":
 		return NewCasdoorStorageProvider(providerType, clientId, clientSecret, region, bucket, endpoint, cert, content), nil
 	}

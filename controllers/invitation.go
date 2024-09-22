@@ -180,11 +180,11 @@ func (c *ApiController) DeleteInvitation() {
 func (c *ApiController) VerifyInvitation() {
 	id := c.Input().Get("id")
 
-	payment, attachInfo, err := object.VerifyInvitation(id)
+	attachInfo, err := object.VerifyInvitation(id)
 	if err != nil {
 		c.ResponseError(err.Error())
 		return
 	}
 
-	c.ResponseOk(payment, attachInfo)
+	c.ResponseOk(nil, attachInfo)
 }

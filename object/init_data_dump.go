@@ -61,16 +61,6 @@ func writeInitDataToFile(filePath string) error {
 		return err
 	}
 
-	payments, err := GetPayments("")
-	if err != nil {
-		return err
-	}
-
-	products, err := GetProducts("")
-	if err != nil {
-		return err
-	}
-
 	resources, err := GetResources("", "")
 	if err != nil {
 		return err
@@ -111,16 +101,6 @@ func writeInitDataToFile(filePath string) error {
 		return err
 	}
 
-	plans, err := GetPlans("")
-	if err != nil {
-		return err
-	}
-
-	pricings, err := GetPricings("")
-	if err != nil {
-		return err
-	}
-
 	invitations, err := GetInvitations("")
 	if err != nil {
 		return err
@@ -136,16 +116,6 @@ func writeInitDataToFile(filePath string) error {
 		return err
 	}
 
-	subscriptions, err := GetSubscriptions("")
-	if err != nil {
-		return err
-	}
-
-	transactions, err := GetTransactions("")
-	if err != nil {
-		return err
-	}
-
 	data := &InitData{
 		Organizations: organizations,
 		Applications:  applications,
@@ -155,8 +125,6 @@ func writeInitDataToFile(filePath string) error {
 		Ldaps:         ldaps,
 		Models:        models,
 		Permissions:   permissions,
-		Payments:      payments,
-		Products:      products,
 		Resources:     resources,
 		Roles:         roles,
 		Syncers:       syncers,
@@ -165,13 +133,9 @@ func writeInitDataToFile(filePath string) error {
 		Groups:        groups,
 		Adapters:      adapters,
 		Enforcers:     enforcers,
-		Plans:         plans,
-		Pricings:      pricings,
 		Invitations:   invitations,
 		Records:       records,
 		Sessions:      sessions,
-		Subscriptions: subscriptions,
-		Transactions:  transactions,
 	}
 
 	text := util.StructToJsonFormatted(data)
