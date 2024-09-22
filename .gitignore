@@ -36,5 +36,9 @@ server
 !manifests/casdoor
 
 init_data.json
+conf/
 
 logs
+
+dist
+out

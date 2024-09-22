@@ -15,19 +15,9 @@
 package util
 
 import (
-	"bufio"
-	"os"
-	"path"
-	"path/filepath"
-	"regexp"
 	"runtime"
-	"strconv"
-	"strings"
 	"time"
 
-	"github.com/go-git/go-git/v5"
-	"github.com/go-git/go-git/v5/plumbing"
-	"github.com/go-git/go-git/v5/plumbing/object"
 	"github.com/shirou/gopsutil/cpu"
 	"github.com/shirou/gopsutil/mem"
 )
@@ -42,6 +32,21 @@ type VersionInfo struct {
 	Version      string `json:"version"`
 	CommitId     string `json:"commitId"`
 	CommitOffset int    `json:"commitOffset"`
+}
+
+var (
+	version      string
+	commitId     string
+	commitOffset int
+	versionInfo  *VersionInfo
+)
+
+func init() {
+	versionInfo = &VersionInfo{
+		Version:      version,
+		CommitId:     commitId,
+		CommitOffset: commitOffset,
+	}
 }
 
 // getCpuUsage get cpu usage
@@ -84,112 +89,5 @@ func GetSystemInfo() (*SystemInfo, error) {
 
 // GetVersionInfo get git current commit and repo release version
 func GetVersionInfo() (*VersionInfo, error) {
-	res := &VersionInfo{
-		Version:      "",
-		CommitId:     "",
-		CommitOffset: -1,
-	}
-
-	_, filename, _, _ := runtime.Caller(0)
-	rootPath := path.Dir(path.Dir(filename))
-	r, err := git.PlainOpen(rootPath)
-	if err != nil {
-		return res, err
-	}
-	ref, err := r.Head()
-	if err != nil {
-		return res, err
-	}
-	tags, err := r.Tags()
-	if err != nil {
-		return res, err
-	}
-	tagMap := make(map[plumbing.Hash]string)
-	err = tags.ForEach(func(t *plumbing.Reference) error {
-		// This technique should work for both lightweight and annotated tags.
-		revHash, err := r.ResolveRevision(plumbing.Revision(t.Name()))
-		if err != nil {
-			return err
-		}
-		tagMap[*revHash] = t.Name().Short()
-		return nil
-	})
-	if err != nil {
-		return res, err
-	}
-
-	cIter, err := r.Log(&git.LogOptions{From: ref.Hash()})
-	if err != nil {
-		return res, err
-	}
-
-	commitOffset := 0
-	version := ""
-	// iterates over the commits
-	err = cIter.ForEach(func(c *object.Commit) error {
-		tag, ok := tagMap[c.Hash]
-		if ok {
-			if version == "" {
-				version = tag
-			}
-		}
-		if version == "" {
-			commitOffset++
-		}
-		return nil
-	})
-	if err != nil {
-		return res, err
-	}
-
-	res = &VersionInfo{
-		Version:      version,
-		CommitId:     ref.Hash().String(),
-		CommitOffset: commitOffset,
-	}
-	return res, nil
-}
-
-func GetVersionInfoFromFile() (*VersionInfo, error) {
-	res := &VersionInfo{
-		Version:      "",
-		CommitId:     "",
-		CommitOffset: -1,
-	}
-
-	_, filename, _, _ := runtime.Caller(0)
-	rootPath := path.Dir(path.Dir(filename))
-	file, err := os.Open(filepath.Clean(path.Join(rootPath, "version_info.txt")))
-	if err != nil {
-		return res, err
-	}
-	defer file.Close()
-
-	// Read file contents line by line
-	scanner := bufio.NewScanner(file)
-
-	for scanner.Scan() {
-		// Use regular expressions to match strings
-		re := regexp.MustCompile(`\{([^{}]+)\}`)
-		versionInfo := scanner.Text()
-		matches := re.FindStringSubmatch(versionInfo)
-		if len(matches) > 1 {
-			split := strings.Split(matches[1], " ")
-			version := split[0]
-			commitId := split[1]
-			commitOffset, _ := strconv.Atoi(split[2])
-			res = &VersionInfo{
-				Version:      version,
-				CommitId:     commitId,
-				CommitOffset: commitOffset,
-			}
-			break
-		}
-	}
-
-	if err := scanner.Err(); err != nil {
-		return res, err
-	}
-
-	return res, nil
+	return versionInfo, nil
 }
