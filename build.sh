@@ -15,4 +15,4 @@ commitOffset=$(git rev-list $version..HEAD --count)
 
 ldflags="-w -s -X 'util.version=$version' -X 'util.commit=$commit' -X 'util.commitOffset=$commitOffset'"
 
-CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -trimpath -ldflags=$ldflags -o server_linux_amd64 .
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -trimpath -ldflags="$ldflags" -o server_linux_amd64 .
