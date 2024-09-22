@@ -17,6 +17,8 @@ package main
 import (
 	"context"
 	"fmt"
+	"time"
+
 	"github.com/beego/beego"
 	"github.com/beego/beego/logs"
 	_ "github.com/beego/beego/session/redis"
@@ -32,7 +34,6 @@ import (
 	"github.com/scutrobotlab/casdoor/radius"
 	"github.com/scutrobotlab/casdoor/routers"
 	"github.com/scutrobotlab/casdoor/util"
-	"time"
 )
 
 func main() {
