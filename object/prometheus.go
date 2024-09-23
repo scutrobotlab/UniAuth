@@ -99,8 +99,10 @@ func GetPrometheusInfo() (*PrometheusInfo, error) {
 }
 
 func getHistogramVecInfo(metricFamily *io_prometheus_client.MetricFamily) []HistogramVecInfo {
-	var histogramVecInfos []HistogramVecInfo
-	for _, metric := range metricFamily.GetMetric() {
+	metrics := metricFamily.GetMetric()
+	histogramVecInfos := make([]HistogramVecInfo, len(metrics))
+
+	for i, metric := range metricFamily.GetMetric() {
 		sampleCount := metric.GetHistogram().GetSampleCount()
 		sampleSum := metric.GetHistogram().GetSampleSum()
 		latency := sampleSum / float64(sampleCount)
@@ -110,20 +112,21 @@ func getHistogramVecInfo(metricFamily *io_prometheus_client.MetricFamily) []Hist
 			Count:   sampleCount,
 			Latency: fmt.Sprintf("%.3f", latency),
 		}
-		histogramVecInfos = append(histogramVecInfos, histogramVecInfo)
+		histogramVecInfos[i] = histogramVecInfo
 	}
 	return histogramVecInfos
 }
 
 func getGaugeVecInfo(metricFamily *io_prometheus_client.MetricFamily) []GaugeVecInfo {
-	var counterVecInfos []GaugeVecInfo
-	for _, metric := range metricFamily.GetMetric() {
-		counterVecInfo := GaugeVecInfo{
+	metrics := metricFamily.GetMetric()
+	counterVecInfos := make([]GaugeVecInfo, len(metrics))
+
+	for i, metric := range metricFamily.GetMetric() {
+		counterVecInfos[i] = GaugeVecInfo{
 			Method:     metric.Label[0].GetValue(),
 			Name:       metric.Label[1].GetValue(),
 			Throughput: metric.Gauge.GetValue(),
 		}
-		counterVecInfos = append(counterVecInfos, counterVecInfo)
 	}
 	return counterVecInfos
 }
